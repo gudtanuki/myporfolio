@@ -1,13 +1,19 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <global-menu></global-menu>
     <router-view/>
   </div>
 </template>
 
 <script>
+
+import GlobalMenu from '@/components/GlobalMenu'
+
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    GlobalMenu
+  }
 }
 </script>
 
