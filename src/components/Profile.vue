@@ -1,24 +1,50 @@
 <template>
-    <div class="profile">
-        <div class="content">
-            <h2>{{ title }}</h2>
-            <p>{{ text }}</p>
-        </div>
+  <div class="profile">
+    <div class="content">
+      <h2>{{ title }}</h2>
+      <div class="abount-me">
+        <p v-for="(profile, index) in profiles" :key=index>
+          <span class="tag">{{ profile.tag }} : </span> 
+          <span class="text">{{ profile.text }}</span>
+        </p>
+      </div>
     </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'Profile',
-    data () {
-        return {
-            title: '基本情報', 
-            text: 'gudtanuki'
-        }
+  name: 'Profile',
+  data () {
+    return {
+      title: 'My Profile', 
+      profiles: [
+        { tag:'名前', text:'gudtanuki' },
+        { tag:'性別', text:'女' },
+        { tag:'年齢', text:'22' },
+        { tag:'居住地', text:'Japan, Tokyo' },
+        { tag:'趣味', text:'スマホゲーム、プログラミングの勉強、シーシャ' },
+        { tag:'最近はじめたこと', text:'ジム' },
+        { tag:'ひとこと', text:'よろしくお願いします！' },
+      ]
     }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
-
+div.abount-me {
+  text-align: left;
+  display: inline-block;
+  span {
+    vertical-align: top;
+    display: inline-block;
+  }
+  span.tag {
+    width: 150px;
+  }
+  span.text {
+    width: 300px;
+  }   
+}
 </style>

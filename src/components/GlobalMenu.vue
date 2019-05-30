@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="global-menu">
     <ul>
       <li v-for="(item, index) in items" :key=index>
          <router-link v-bind:to=item.path>
@@ -25,40 +25,38 @@ export default {
 }
 </script>
 
-<style scoped>
-ul {
-  margin-left: auto;
-  width: 480px;
-  display:flex;
-  justify-content: center;
-  padding: 0;
-  list-style: none;
-}
+<style lang="scss" scoped>
+div.global-menu {
+  ul {
+    margin-left: auto;
+    width: 400px;
+    display:flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
 
-li {
-  width: 100px;
-  height: 50px;
-  margin-left:10px;
-  margin-right:10px;
-  font-size: 14px;
-  background-color: skyblue;
-  border-radius: 8px;
-  position: relative;
-}
+    li {
+      width: 100px;
+      height: 40px;
+      margin-left:5px;
+      margin-right:5px;
+      font-size: 14px;
+      position: relative;
 
-li:hover {
-  opacity: 0.4;
-}
+      &:hover {
+        opacity: 0.5;
+      }
 
-/*  router-linkがaタグとして表示されてたのでスタイルをaタグに書いた*/
-a {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  color: white;
-  text-decoration: none;
-  line-height: 50px;
+      a {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        color: black;
+        text-decoration: none;
+      }
+    }
+  }
 }
 </style>
