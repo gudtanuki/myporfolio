@@ -23,7 +23,7 @@ export default {
         { tag:'性別', text:'女' },
         { tag:'年齢', text:'22' },
         { tag:'居住地', text:'Japan, Tokyo' },
-        { tag:'趣味', text:'スマホゲーム、プログラミングの勉強、シーシャ' },
+        { tag:'趣味', text:'スマホゲーム、プログラミング、シーシャ、睡眠！' },
         { tag:'最近はじめたこと', text:'ジム' },
         { tag:'ひとこと', text:'よろしくお願いします！' },
       ]
@@ -33,9 +33,19 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$mb: 640px;
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content
+  }
+}
+
 div.abount-me {
   text-align: left;
   display: inline-block;
+  @include max-screen($mb) {
+    margin: 0 15%;
+  }
   span {
     vertical-align: top;
     display: inline-block;

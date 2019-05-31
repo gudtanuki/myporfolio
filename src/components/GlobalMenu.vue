@@ -26,6 +26,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+$mb: 640px;
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content
+  }
+}
+
 div.global-menu {
   ul {
     margin-left: auto;
@@ -34,7 +41,10 @@ div.global-menu {
     justify-content: center;
     padding: 0;
     list-style: none;
-
+    @include max-screen($mb) {
+      width : auto;
+      text-align: center;
+    }
     li {
       width: 100px;
       height: 40px;
@@ -42,6 +52,9 @@ div.global-menu {
       margin-right:5px;
       font-size: 14px;
       position: relative;
+      @include max-screen($mb) {
+        display: inline-block;
+      }
 
       &:hover {
         opacity: 0.5;

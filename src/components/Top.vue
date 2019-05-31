@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       title: 'Welcome to My Portfolio Page',
-      introduction: 'Vueを勉強するために作ったポートフォリオ？サイトです。随時更新されます。',
+      introduction: 'Vueを勉強するために作ったポートフォリオサイトです。随時更新予定です。',
       webs: [
         { icon:'fab fa-twitter-square', name:'Twitter', url:'https://twitter.com/gudtanuki' },
         { icon:'fab fa-github-square', name:'GitHub', url:'https://github.com/gudanago' },
@@ -31,7 +31,19 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+$mb: 640px;
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content
+  }
+}
+
+div.indtruction {
+  @include max-screen($mb) {
+    margin: 0 15%;
+  }
   a{
     color: black;
   }
+}
 </style>
