@@ -21,8 +21,8 @@ export default {
       introduction: 'Vueを勉強するために作ったポートフォリオサイトです。随時更新予定です。',
       webs: [
         { icon:'fab fa-twitter-square', name:'Twitter', url:'https://twitter.com/gudtanuki' },
-        { icon:'fab fa-github-square', name:'GitHub', url:'https://github.com/gudanago' },
-        { icon:'fas fa-pen-square', name:'qiita', url:'https://qiita.com/gudanago' }
+        { icon:'fab fa-github-square', name:'GitHub', url:'https://github.com/gudtanuki' },
+        { icon:'fas fa-pen-square', name:'qiita', url:'https://qiita.com/gudtanuki' }
       ]
     }
   }
