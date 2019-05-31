@@ -44,7 +44,9 @@ html, body {
     color: #2c3e50;
     margin-top: 40px;
     p {
-      font-size: 10px;
+      @include max-screen($mb) {
+        font-size: 10px;
+      }
     }
   }
 }
