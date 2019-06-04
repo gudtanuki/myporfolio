@@ -6,7 +6,7 @@
     </div>
     <div class="websights">
       <div class="sigt" v-for="(web, index) in webs" :key=index>
-        <i v-bind:class=web.icon></i><a v-bind:href=web.url>{{ web.name }}</a>
+        <i v-bind:class=web.icon></i><a v-bind:href=web.url target="_blank">{{ web.name }}</a>
       </div>
     </div>
   </div>
