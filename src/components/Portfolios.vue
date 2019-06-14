@@ -2,7 +2,7 @@
     <div class="portfolios">
         <h2>{{ title }}</h2>
         <div class="contents">
-            <p>{{ url }}{{ name }}{{ endurl }}</p>
+            <p><a href="url"></a>{{ name }}</p>
             <p>{{ text }}</p>
         </div>
     </div>
@@ -16,8 +16,7 @@ export default {
             title: 'My Portfolios',
             name: 'Myblog', 
             text: 'Laravelで簡易的ではありますがブログアプリを作成しました。',
-            url: '<a href="http://gudblog.herokuapp.com/">',
-            endurl: '</a>'
+            url: 'http://gudblog.herokuapp.com/'
         }
     }
 }
