@@ -2,7 +2,7 @@
     <div class="portfolios">
         <h2>{{ title }}</h2>
         <div class="contents">
-            <p>{{ name }}</p>
+            <p><a href="{{ url }}">{{ name }}</a></p>
             <p>{{ text }}</p>
         </div>
     </div>
@@ -14,8 +14,9 @@ export default {
     data () {
         return {
             title: 'My Portfolios',
-            name: '今後追加していきます', 
-            text: 'ここに説明やURLが入ります'
+            name: 'Myblog', 
+            text: 'Laravelで簡易的ではありますがブログアプリを作成しました。',
+            url: 'http://gudblog.herokuapp.com/'
         }
     }
 }
